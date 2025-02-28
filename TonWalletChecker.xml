@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BrowserAutomationStudioProject>
+     <Script><![CDATA[section(1 /*1*/,1 /*1*/,1 /*1*/,0,function(){
+   section_start("\u007b\u0022n\u0022:\u0022Initialize\u0022\u007d", 0)!
+
+   section_end()!
+
+   _call(_on_start, null)!
+
+   section_start("", 460036642)!
+   /*Dat:eyJzIjoicHJvamVjdF9kaXJlY3RvcnkiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6IlNhdmUiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IlBST0pFQ1RfRElSRUNUT1JZIiwiaXNfZGVmIjp0cnVlfV19*/
+   VAR_PROJECT_DIRECTORY = project_directory();
+   section_end()!
+
+   section_start("", 555873981)!
+   /*Dat:eyJzIjoiZmlsZXN5c3RlbV9maWxlX3RvX2xpc3QiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6IlZhbHVlIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJ7e0FkZHJlc3Nlc319IiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiU2F2ZSIsInR5cGUiOiJ2YXIiLCJkYXRhIjoiTElTVF9XSVRIX0ZJTEVfQ09OVEVOVCIsImlzX2RlZiI6dHJ1ZX1dfQ==*/
+   {
+   var d = native("filesystem", "readfile", JSON.stringify({value: RInfo("Addresses","Location"),base64:false,from:0,to:0}))
+   VAR_LIST_WITH_FILE_CONTENT	= (d.length == 0) ? [] : d.split(/\r?\n/)
+   }
+   section_end()!
+
+   section_start("", 939605678)!
+   /*Dat:eyJzIjoiTGlzdExlbmd0aCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwidWUiOiIwIiwidXNwIjoiMCIsImQiOlt7ImlkIjoiVmFyaWFibGUiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkxJU1RfV0lUSF9GSUxFX0NPTlRFTlQiLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiVmFyaWFibGVMZW5ndGgiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkxJU1RfTEVOR1RIIiwiaXNfZGVmIjp0cnVlfV19*/
+   VAR_LIST_LENGTH = (VAR_LIST_WITH_FILE_CONTENT).length
+   section_end()!
+
+   section_start("", 511154221)!
+   /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJ1ZSI6IjAiLCJ1c3AiOiIwIiwiZCI6W3siaWQiOiJMb2dUZXh0IiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiLQl9Cw0LPRgNGD0LbQtdC90L4gW1tMSVNUX0xFTkdUSF1dINCw0LTRgNC10YHQvtCyIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOmZhbHNlfV19*/
+   log("Загружено " + VAR_LIST_LENGTH + " адресов")
+   section_end()!
+
+   section_start("", 353982055)!
+   /*Dat:eyJzIjoiZm9yIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJ1ZSI6IjAiLCJ1c3AiOiIwIiwiZCI6W3siaWQiOiJGb3JGcm9tIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIxIiwiY2xhc3MiOiJleHByZXNzaW9uIiwiaXNfZGVmIjpmYWxzZX0seyJpZCI6IkZvclRvIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJbW0xJU1RfTEVOR1RIXV0iLCJjbGFzcyI6ImV4cHJlc3Npb24iLCJpc19kZWYiOmZhbHNlfV19*/
+   _do(function(){
+   _set_action_info({ name: "For" });
+   VAR_CYCLE_INDEX = _iterator() - 1 + parseInt(1)
+   if(VAR_CYCLE_INDEX > parseInt(VAR_LIST_LENGTH))_break();
+   section_insert()
+      section_start("", 240125838)!
+      /*Dat:eyJzIjoiRmlyc3RMaXN0RWxlbWVudCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwidWUiOiIwIiwidXNwIjoiMCIsImQiOlt7ImlkIjoiVmFyaWFibGUiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkxJU1RfV0lUSF9GSUxFX0NPTlRFTlQiLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiQ2hlY2siLCJ0eXBlIjoiY2hlY2siLCJkYXRhIjp0cnVlLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiVmFyaWFibGVSZXN1bHQiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkZJUlNUX0xJU1RfRUxFTUVOVCIsImlzX2RlZiI6dHJ1ZX1dfQ==*/
+      VAR_FIRST_LIST_ELEMENT = (VAR_LIST_WITH_FILE_CONTENT)[0];
+      VAR_LIST_WITH_FILE_CONTENT.splice(0,1)
+      section_end()!
+
+      section_start("", 409138507)!
+      /*Dat:eyJzIjoibG9hZCIsInYiOjEsImYiOltdLCJ1dyI6IjEiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwidWUiOiIwIiwidXNwIjoiMCIsImQiOlt7ImlkIjoiTG9hZFVybCIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiaHR0cHM6Ly90b25zY2FuLm9yZy9hZGRyZXNzL1tbRklSU1RfTElTVF9FTEVNRU5UXV0iLCJjbGFzcyI6InN0cmluZyIsImlzX2RlZiI6ZmFsc2V9LHsiaWQiOiJSZWZlcnJlciIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9XX0=*/
+      _load("https://tonscan.org/address/" + VAR_FIRST_LIST_ELEMENT, "", false)!
+      section_end()!
+
+      section_start("", 568199769)!
+      /*Dat:eyJzIjoic2xlZXAiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6InNsZWVwZnJvbSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiMTAwMCIsImNsYXNzIjoiaW50IiwiaXNfZGVmIjp0cnVlfSx7ImlkIjoic2xlZXB0byIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiMTAwMCIsImNsYXNzIjoiaW50IiwiaXNfZGVmIjp0cnVlfSx7ImlkIjoic2xlZXBmcm9tdG8iLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IjEwMDAiLCJjbGFzcyI6ImludCIsImlzX2RlZiI6dHJ1ZX0seyJpZCI6InNsZWVwcmFuZG9tIiwidHlwZSI6ImNoZWNrIiwiZGF0YSI6ZmFsc2UsImlzX2RlZiI6dHJ1ZX1dfQ==*/
+      sleep(1000)!
+      section_end()!
+
+      section_start("", 369020364)!
+      /*Dat:eyJzIjoidGV4dCIsInYiOjEsImYiOltdLCJ1dyI6IjAiLCJ1dCI6IjAiLCJ1dG8iOiIwIiwidW0iOiIwIiwidWUiOiIwIiwidXNwIjoiMCIsImQiOlt7ImlkIjoiU2F2ZVRleHQiLCJ0eXBlIjoidmFyIiwiZGF0YSI6InRvbmJhbGFuY2UiLCJpc19kZWYiOmZhbHNlfV0sInAiOnsiaXNfaW1hZ2UiOmZhbHNlLCJjc3MiOiIgPkNTUz4gI0NvbnRlbnRQbGFjZUhvbGRlcjFfZGl2RmlsdGVyZWRIb2xkZXJCYWxhbmNlIiwidmVyc2lvbiI6IjEuMCIsImNzczEiOiIgPkNTUz4gI0NvbnRlbnRQbGFjZUhvbGRlcjFfZGl2RmlsdGVyZWRIb2xkZXJCYWxhbmNlIiwiY3NzMiI6IiA+Q1NTPiA6bnRoLWNoaWxkKDE1KSA+IDpudGgtY2hpbGQoNCkgPiA6bnRoLWNoaWxkKDEpID4gOm50aC1jaGlsZCgxKSA+IDpudGgtY2hpbGQoMikiLCJjc3MzIjoiIiwiY3VycmVudCI6Im1hdGNoIiwibWF0Y2giOiI+TUFUQ0g+Y2xhc3M9XCJjYXJkLXJvd19fdmFsdWVcIj5BVD4xIiwieHBhdGgiOiIgPlhQQVRIPiBpZChcIkNvbnRlbnRQbGFjZUhvbGRlcjFfZGl2RmlsdGVyZWRIb2xkZXJCYWxhbmNlXCIpIiwiYXQiOiI2NTksIDU3OCIsIndlIjp0cnVlLCJmYSI6dHJ1ZX19*/
+      /*Browser*/
+      _SELECTOR = "\u003eMATCH\u003eclass=\u0022card-row__value\u0022\u003eAT\u003e1";
+      wait_element(_SELECTOR)!
+      get_element_selector(_SELECTOR, false).text()!
+      VAR_TONBALANCE = _result()
+      section_end()!
+
+      section_start("", 831444145)!
+      /*Dat:eyJzIjoiY3JlYXRlX2Nzdl9zdHJpbmciLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6IkV4cHJlc3Npb25WYWx1ZSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJFeHByZXNzaW9uVmFsdWVDb25maXJtIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIiLCJjbGFzcyI6ImV4cHJlc3Npb24iLCJpc19kZWYiOnRydWV9LHsiaWQiOiJpdGVtMSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiW1tUT05CQUxBTkNFXV0iLCJjbGFzcyI6InN0cmluZyIsImlzX2RlZiI6ZmFsc2V9LHsiaWQiOiJpdGVtMiIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJpdGVtMyIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJpdGVtc19saXN0IiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIiLCJjbGFzcyI6InN0cmluZyIsImlzX2RlZiI6dHJ1ZX0seyJpZCI6InNlcGFyYXRvciIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiOiIsImNsYXNzIjoic3RyaW5nIiwiaXNfZGVmIjp0cnVlfSx7ImlkIjoiU2F2ZSIsInR5cGUiOiJ2YXIiLCJkYXRhIjoiQ1NWX1NUUklORyIsImlzX2RlZiI6dHJ1ZX1dfQ==*/
+      VAR_CSV_STRING = _csv_generate([_avoid_nil(VAR_TONBALANCE)], ":");
+      section_end()!
+
+      section_start("", 824769718)!
+      /*Dat:eyJzIjoiY2xlYW4iLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6IkV4cHJlc3Npb25WYWx1ZSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJFeHByZXNzaW9uVmFsdWVDb25maXJtIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIiLCJjbGFzcyI6ImV4cHJlc3Npb24iLCJpc19kZWYiOnRydWV9LHsiaWQiOiJzdHJpbmciLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IltbQ1NWX1NUUklOR11dIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiQ2hlY2siLCJ0eXBlIjoiY2hlY2siLCJkYXRhIjp0cnVlLCJpc19kZWYiOnRydWV9LHsiaWQiOiJDaGVjazIiLCJ0eXBlIjoiY2hlY2siLCJkYXRhIjp0cnVlLCJpc19kZWYiOnRydWV9LHsiaWQiOiJDaGVjazMiLCJ0eXBlIjoiY2hlY2siLCJkYXRhIjp0cnVlLCJpc19kZWYiOnRydWV9LHsiaWQiOiJjaGFyYWN0ZXJzX3RvX2RlbGV0ZSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJjaGFyYWN0ZXJzX3RvX3NwYWNlIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIiLCJjbGFzcyI6InN0cmluZyIsImlzX2RlZiI6dHJ1ZX0seyJpZCI6IlNhdmUiLCJ0eXBlIjoidmFyIiwiZGF0YSI6IkNMRUFORURfU1RSSU5HIiwiaXNfZGVmIjp0cnVlfV19*/
+      VAR_CLEANED_STRING = _clean(VAR_CSV_STRING, "\\t\\v", "\\r\\n\\f", true);
+      section_end()!
+
+      section_start("", 313766196)!
+      /*Dat:eyJzIjoibG9nIiwidiI6MSwiZiI6W10sInV3IjoiMCIsInV0IjoiMCIsInV0byI6IjAiLCJ1bSI6IjAiLCJ1ZSI6IjAiLCJ1c3AiOiIwIiwiZCI6W3siaWQiOiJFeHByZXNzaW9uVmFsdWUiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IiIsImNsYXNzIjoic3RyaW5nIiwiaXNfZGVmIjp0cnVlfSx7ImlkIjoiRXhwcmVzc2lvblZhbHVlQ29uZmlybSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJleHByZXNzaW9uIiwiaXNfZGVmIjp0cnVlfSx7ImlkIjoiTG9nVGV4dCIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiW1tGSVJTVF9MSVNUX0VMRU1FTlRdXSBBZGRyZXNzIOKAkyBbW0NMRUFORURfU1RSSU5HXV0iLCJjbGFzcyI6InN0cmluZyIsImlzX2RlZiI6ZmFsc2V9XX0=*/
+      log(VAR_FIRST_LIST_ELEMENT + " Address – " + VAR_CLEANED_STRING)
+      section_end()!
+
+      section_start("", 502839832)!
+      /*Dat:eyJzIjoiZmlsZXN5c3RlbV93cml0ZWZpbGUiLCJ2IjoxLCJmIjpbXSwidXciOiIwIiwidXQiOiIwIiwidXRvIjoiMCIsInVtIjoiMCIsInVlIjoiMCIsInVzcCI6IjAiLCJkIjpbeyJpZCI6IkV4cHJlc3Npb25WYWx1ZSIsInR5cGUiOiJjb25zdHIiLCJkYXRhIjoiIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOnRydWV9LHsiaWQiOiJFeHByZXNzaW9uVmFsdWVDb25maXJtIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiIiLCJjbGFzcyI6ImV4cHJlc3Npb24iLCJpc19kZWYiOnRydWV9LHsiaWQiOiJGaWxlIiwidHlwZSI6ImNvbnN0ciIsImRhdGEiOiJbW1BST0pFQ1RfRElSRUNUT1JZXV1cXFRPTmNoZWNrZXIudHh0IiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiVmFsdWUiLCJ0eXBlIjoiY29uc3RyIiwiZGF0YSI6IltbRklSU1RfTElTVF9FTEVNRU5UXV0gQWRkcmVzcyDigJMgW1tDTEVBTkVEX1NUUklOR11dIiwiY2xhc3MiOiJzdHJpbmciLCJpc19kZWYiOmZhbHNlfSx7ImlkIjoiQ2hlY2szIiwidHlwZSI6ImNoZWNrIiwiZGF0YSI6dHJ1ZSwiaXNfZGVmIjpmYWxzZX0seyJpZCI6IkNoZWNrIiwidHlwZSI6ImNoZWNrIiwiZGF0YSI6dHJ1ZSwiaXNfZGVmIjpmYWxzZX0seyJpZCI6IkNoZWNrMiIsInR5cGUiOiJjaGVjayIsImRhdGEiOmZhbHNlLCJpc19kZWYiOnRydWV9XX0=*/
+      native("filesystem", "writefile", JSON.stringify({path: VAR_PROJECT_DIRECTORY + "\u005cTONchecker.txt",value: (VAR_FIRST_LIST_ELEMENT + " Address – " + VAR_CLEANED_STRING).toString() + "\r\n",base64:false,append:true}))
+      section_end()!
+
+   })!
+   section_end()!
+
+})!]]></Script>
+     <ModuleInfo><![CDATA[{
+}
+]]></ModuleInfo>
+     <Modules/>
+     <EmbeddedData><![CDATA[[]]]></EmbeddedData>
+     <DatabaseId>Database.23360</DatabaseId>
+     <Schema></Schema>
+     <ConnectionIsRemote>false</ConnectionIsRemote>
+     <ConnectionServer></ConnectionServer>
+     <ConnectionPort></ConnectionPort>
+     <ConnectionLogin></ConnectionLogin>
+     <ConnectionPassword></ConnectionPassword>
+     <ScriptName>ScriptName</ScriptName>
+     <ProtectionStrength>4</ProtectionStrength>
+     <UnusedModules>InMail;ClickCaptcha;JSON;URL;PhoneVerification</UnusedModules>
+     <ScriptIcon>iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUYCTcMXHU3uQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAANRElEQVR42u2dbWwU5drHfzM7O7sLbc5SWmlrJBxaIB00ES0QDr6kp4Km+qgt0aZ+sIQvT63HkKrED2z0QashIQHjMasfDAfxJWdzDpzHNxBINSCJVkvSWBg1WgIRTmtog6WlnZ3dnXk+0J2npXDY0naZ3b3/X9ptuy8z1+++ruu+e93XLXENaZqGruvJ7/8ArAKWAnkIuUUWcAb4Vtf1E5N5onQtw2uaVgKEgP8GPOJeZ4SOAn/TdX3ndQGgaRqAAvwTeASw/xMsQq7VRWC9ruv/HOvJx0q+yhP/DJjAw9fyFEKu1mzgH5qmtY1682t7AE3TaoG94t5llWzgtK7rf7zcE0iXuf0/A23ifmUtBN26ri8a+0PPZTH/Z+Hus1YSUFBUVOQ9d+7cF1fyAP87GvMFANmvUqBH13Wk0dFfAvxb3JecCQX/0nV9HYA8mhCERn8hlBuhoE7TNCkZ9+HSIs+kXL9lWRiGgWVZ7sTctsnPz5/y65imiWmarrWmLMv4/X5kWZ7sU/8C/FUZXd71TObGFhcXU19fT3V1NYWFhdi2+5xHXl4eZWVlU4agqamJDRs2uBaAgYEBDhw4QCQSobe3F0lKeRwvS3qAVZMx/sqVK9mxYweDg4NIksTQ0JB7fZ0kTYsHuHjxomuvUVEUampqqK+vp6Wlhfb29lSv+09waSVwaapvVlxczI4dOxgaGpqWmys0faAPDQ2xY8cOiouLU33akqQHSOm/epZlUV9f74z8yz2Doiioqno9sWjGQsB0hCZVVZk9e7ZrjG1ZFqZpEo/HJ9hhcHCQ+vp6Xn/99ZTtIGma9hLwP9f6w+HhYQ4dOoTf759AX09PD+FwmI6ODgYGBkQSOIPXFAwGqayspLm5mZKSkgmQG4bBmjVrmDVr1jVfT9d1SZkMeYWFheNiviRJHDx4kNbWVgeMvLzsKhNQVRVVVV3zeRKJBO3t7Rw+fJhQKMTatWvHQVBYWDipmZk8WQLHft/T0zPO+ELpk9/vp7W1lZ6engl2mdQ0cirZZzgcFsa/wRCEw2EURbnu17huAFRVpaOjQ1jhBqujo2NKIeq6AZBl2TUJXy5rYGBgSjMvWdzC3JYAQAAgJAAQEgAICQCEBABCAgAhAYCQAEAoR6S4+cNdqfgkXZIkCVmWkWUZj8eDx+PJyiooxc3G7+7uviE1h7FYDNM0GRwcpL+/nzNnznDq1CmOHz9OZ2cnhmGgqmpWAOFaAJJ1bjeyIDM/P5/8/HwWLFjAXXfdhaIoeL1eOjs7OXDgAJ9++im2bbumDC7rQkBStm3j9XrTNuK8Xq/zvolEgng87nyNx+MsXryYiooKnn32WSKRCO+88w6JRCIjPUJGAODz+XjyySf58ccf0wacqqoEg0FKSkqYP38+FRUVrFixgoULFzobYizLYt26ddTW1rJ161YOHTrkqvKxrAEALlW/pLs6d3h4mO7ubrq7u2lrayMajXLTTTfx0EMP0dDQQCAQcEb+Sy+9xMqVK2ltbc0oCMQ0MNUbJcsEAgEGBwf58MMPuf/++wmHw3g8HidxvO+++9i+fburt5IJAKYpQfX5fOzdu5dHH32UM2fOOKHjjjvuYNOmTcRiMQFALoBw8eJFGhsbnbYrtm1TW1vL8uXLBQC5Iq/XyzPPPMO5c+ewbRvDMAiFQhiGIQDIFSmKwgsvvEAgEECSJILBINXV1QKAXNKpU6c4cuQItm0Tj8d55JFHXJ8QCgCmORR89NFHzqJVJuQBAoBp1tdffz1uHWDx4sUCgFxSPB53poWJRIIFCxYIAHJJsixz/vx54NKO6mAwKADItbWB5CKQbdsEAgEBQC7JsqxxPRLi8bgAIJeUSCSYP38+AB6Ph76+PgFALqm8vNypJ1AUhe7ubgFArsi2bdasWUM0GgVgZGQkbTUMAgCXTAEbGhqcx/v378fn8wkAckGxWIznnnvOqQ/0+/3s2rXLqRdwq1KuCLJte1x2O119+LIl8Vu7di21tbWYpokkSezevZvz58/POABTtUvKAOTn51NWVuYUPk5XH75Ml2EYrFu3jueff96J/SdPniQcDqfF/U/VLspk30zo/+f7qqqybds2Vq9eTTQaRZIkzp49y1NPPZXW2D8Vu4gc4DpivcfjYf369Xz++eesWLEC0zRRVZVvvvmGxsbGjLoeRZj06rHVsiwSiQSxWIyioiJWrlxJVVUV99xzD9Fo1KkIjsVivPbaaxw6dMj1WX9GApBIJFizZg3Lli1Ly/t5vV78fj9z5syhtLSUhQsXUlBQ4BjdMAwURcE0Td577z3ef/99ZFnOOONnDADJ6pobqZGRkUsxU5Y5duwYH3/8MV9++SU+n8/1U72MB8BNW64sy+LOO+9k1qxZlJaWcvDgQfr7+zNuR1BGAeDxePjkk0/o7+9PC2xerxefz0cwGKSoqIibb76Z0tJSYrEYsVgM27ZZsmQJFRUVbNy4ke+++46dO3dy7NixjOudnDEA7Nu3j59//jktyd/YJDCZCPp8Pmd/YFVVFeXl5YyMjDAyMsLSpUt588036ezsZMuWLZw/fz5jNoqKaeAVPECyOUTyFJRAIIAsy/z000/s3r2bhoYG6urq2Ldvn+P6TdOkoqKCPXv2cO+994qdQdkMSCAQoK+vj+3bt/Pggw+O69gdi8XYsmULTzzxREZAIACYYmgaHh5m06ZNhEIhpw7ANE2efvrpCad5CACyVD6fj6NHj9LY2Igsy872sBdffJGCggIBQK6Ehl9//ZWNGzfi9/uRJIloNMrmzZudfxIJAHIAgq6uLiKRiPN4+fLlLFq0SACQK0qepZQsDDEMg7q6OhKJhAAgV2TbNnv37nUeV1VVuXareMoLQaZp0tTU5Ox2VVWVt99+O2OXQGd0VMkyX3zxBY899hixWIxgMEhpaemMnLE0VbtMCoANGzY4fftmz57NG2+8IQC4ir7//nsURSEWixGPx1m0aNGMnLI2VbuIEDBDsixr3CbRefPmiRwg18LAhQsXnJzATQdQCwDSNCUcO/93a82AAGAGQ0DyBO9kNzEBQA5pbNyXZZnff/9dAJBLCgaDzJkz59JUS1H45ZdfBAC5pLvvvttZ/EkkEpw8edKVn1OUhc+ADMPg4YcfdpZ/v/rqqykd8S48QIZJ0zRuv/12p77ws88+EwDkiqLRKK2trRiGgW3b9Pb2cvjwYdd+XhECplEjIyNs27aNuXPnApcKRV555RVnOig8QJaP/K1bt7Jq1Spn6rdnzx66urpc/bkFANMw3y8oKOCDDz5g9erVWJaFJEl0dnaybds2p05QhIAsUzwex+fz0dTUxOOPP45pmti2jcfj4ejRo2zevDkjNokIAFJUsgN4PB5nxYoV1NTU8MADD2CaplP+raoqb731Frt3786YHUIZA4BhGGlbT0+O5GAwyNy5c7nlllsoLy/n1ltvpbKyEo/Hg2mazqj3+XwcP36cl19+md9++y2jtodlBADRaJRdu3albbuVoijIsjxua1iy42fysSzL+P1+2tvbeffdd+no6MDv92fcIZIZszs4nS1XL9/RkzwdVFEUPB4PXV1dHDlyhP379zs7gzNtU6jrAbi8+1U6k7tYLMbQ0BADAwOcO3eOs2fPcvr0aX744QdOnDhBPB53zg7O9JI41wJweferdHucK50eDoz7Phvk6hAgupLNvMRCkABASAAgJAAQEgAICQCEBABCAgAhAYCQAEBIACAkABASAFxV4tCoG6+p2uC6AciEk7FzQcFgEMuy0g+AaZpUVlYKC9xgVVZWOg2i0gpAPB6nubnZte3PckGGYdDc3DylcrlJATC2OkeSJEpKSgiFQgKCG2T8UChESUnJBLtMRilXBMmyTF9f37jiR9u2Wbt2LbfddhvhcJiOjo4Z6YV3vcnRdFQUJcu/3XJNwWCQyspKmpubKSkpmZAE9vX1TaoyWQFSyiD8fj9tbW3U1NSMo8y2bebNm8err76KqqquKYvOy8ujrKxsyhA0NTWxYcMG14x8y7IwTZN4PD7B+LZt09bWNqkKZQU4k6oHiEQi1NfXMzQ0NCE0JBIJ52Qtt2g6CkpN03Rlg6crXVt+fj6RSCTVQXghmQN8m+qb9vb20tLSIg6OduFaQF5eHi0tLfT29qb6tG8BFF3XT2ialjJ17e3t1NXVUV9fT3V1NYWFha6EYbogVVXVtU0eAQYGBjhw4ACRSITe3t5UvZ4NdAJIAJqmfQXcNdlYZBjGlBYhRBI4dSW3qF1H7lUJHEvOAv42WQBkWXZ154vpkqqq2dgQ+4Ku68ecdQBd13cCFxHKFb1wpYWg9eK+ZH++CPxb1/W3nbxu7G81TWsDqi7/uVBWqQw4qev6eA+gaRq6rlcDp0dJEco+/Zeu647xxwGg63oSgj8C3eJeZZXbTxr/0wnJ/NgHYyBYBLx62QsIZaZ6gLIrGX8CAEkIRr+GgFLgX+IeZuSIvwA8pev6zcBVO1X/x2Rv1BugaZoE/AVYBvwJWCLus/vm9lxa3u0E/p6c5wvloFJd2gf4P8Hwf+/uucowAAAAAElFTkSuQmCC</ScriptIcon>
+     <IsCustomIcon>false</IsCustomIcon>
+     <HideBrowsers>false</HideBrowsers>
+     <ShowAdvanced>false</ShowAdvanced>
+     <IntegrateScheduler>false</IntegrateScheduler>
+     <SingleInstance>false</SingleInstance>
+     <CopySilent>false</CopySilent>
+     <IsEnginesInAppData>false</IsEnginesInAppData>
+     <CompileType>NoProtection</CompileType>
+     <ScriptVersion>1.0.0</ScriptVersion>
+     <AvailableLanguages>en,ru</AvailableLanguages>
+     <EngineVersion>28.3.0</EngineVersion>
+     <SettingsWorker>EnableWidevine=true
+EnableSafeBrowsing=true
+EnableVariations=true
+EnableComponents=true
+AutostartDebug=false
+SaveBrowserLog=false
+ProfilesCaching=true
+MaxBrowserStartSimultaneously=3
+MinFreeMemoryToStartBrowser=1500
+MinUnusedCpu=35
+IsMaximized=false
+Restart=true
+UseHumanLikeMouseMoves=true
+DebugToolbox=false
+DebugScenario=false
+Languages=&quot;&quot;
+Modules=&quot;&quot;
+Helper=&quot;disable&quot;
+Canvas=&quot;enable&quot;
+CanvasNoise=&quot;&quot;
+Audio=&quot;enable&quot;
+QUIC=&quot;enable&quot;
+AudioNoise=&quot;&quot;
+MaxFPS=30
+Webrtc=&quot;enable&quot;
+WebrtcIps=&quot;&quot;
+Webgl=&quot;enable&quot;
+WebglNoise=&quot;&quot;
+WebglRenderer=&quot;&quot;
+WebglVendor=&quot;&quot;
+Detector=false
+</SettingsWorker>
+     <ChromeCommandLine>--disk-cache-size=1
+--disable-gpu-program-cache
+--disable-gpu-shader-disk-cache
+--disable-features=GpuProcessHighPriorityWin,GpuUseDisplayThreadPriority,CookieDeprecationFacilitatedTesting,OptimizationGuideModelDownloading
+--lang=en
+--disable-auto-reload</ChromeCommandLine>
+     <ModulesMetaJson>{
+    &quot;Archive&quot;: false,
+    &quot;FTP&quot;: false,
+    &quot;Excel&quot;: false,
+    &quot;SQL&quot;: false,
+    &quot;ReCaptcha&quot;: false,
+    &quot;FunCaptcha&quot;: false,
+    &quot;HCaptcha&quot;: false,
+    &quot;SmsReceive&quot;: false,
+    &quot;Checksum&quot;: false,
+    &quot;MailDeprecated&quot;: false
+}
+</ModulesMetaJson>
+     <InterfaceState>{&quot;variables&quot;:{&quot;sortings&quot;:[{&quot;name&quot;:&quot;frequency&quot;,&quot;active&quot;:false},{&quot;name&quot;:&quot;dateModified&quot;,&quot;active&quot;:false},{&quot;name&quot;:&quot;dateCreated&quot;,&quot;active&quot;:false},{&quot;name&quot;:&quot;alphabetically&quot;,&quot;active&quot;:true}],&quot;filters&quot;:[{&quot;name&quot;:&quot;undefined&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;boolean&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;object&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;string&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;number&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;array&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;date&quot;,&quot;active&quot;:true},{&quot;name&quot;:&quot;null&quot;,&quot;active&quot;:true}],&quot;options&quot;:[{&quot;name&quot;:&quot;groups&quot;,&quot;active&quot;:false}],&quot;groups&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;Main&quot;,&quot;color&quot;:&quot;brown&quot;,&quot;expanded&quot;:true,&quot;items&quot;:[{&quot;key&quot;:&quot;CLEANED_STRING&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;CSV_STRING&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;CYCLE_INDEX&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;FIRST_LIST_ELEMENT&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;LIST_LENGTH&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;LIST_WITH_FILE_CONTENT&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;PROJECT_DIRECTORY&quot;,&quot;fixed&quot;:false},{&quot;key&quot;:&quot;TONBALANCE&quot;,&quot;fixed&quot;:false}]}],&quot;nodes&quot;:{&quot;[\&quot;LIST_WITH_FILE_CONTENT\&quot;]&quot;:false}},&quot;resources&quot;:{&quot;sortings&quot;:[],&quot;filters&quot;:[],&quot;options&quot;:[],&quot;groups&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;Main&quot;,&quot;color&quot;:&quot;brown&quot;,&quot;expanded&quot;:true,&quot;items&quot;:[{&quot;key&quot;:&quot;Addresses&quot;,&quot;fixed&quot;:false}]}],&quot;nodes&quot;:{}},&quot;callstack&quot;:{&quot;filters&quot;:[]}}</InterfaceState>
+     <OutputTitle1 en="First Results" ru="First Results"/>
+     <OutputTitle2 en="Second Results" ru="Second Results"/>
+     <OutputTitle3 en="Third Results" ru="Third Results"/>
+     <OutputTitle4 en="Fourth Results" ru="Fourth Results"/>
+     <OutputTitle5 en="Fifth Results" ru="Fifth Results"/>
+     <OutputTitle6 en="Sixth Results" ru="Sixth Results"/>
+     <OutputTitle7 en="Seventh Results" ru="Seventh Results"/>
+     <OutputTitle8 en="Eighth Results" ru="Eighth Results"/>
+     <OutputTitle9 en="Ninth Results" ru="Ninth Results"/>
+     <OutputVisible1>1</OutputVisible1>
+     <OutputVisible2>1</OutputVisible2>
+     <OutputVisible3>1</OutputVisible3>
+     <OutputVisible4>0</OutputVisible4>
+     <OutputVisible5>0</OutputVisible5>
+     <OutputVisible6>0</OutputVisible6>
+     <OutputVisible7>0</OutputVisible7>
+     <OutputVisible8>0</OutputVisible8>
+     <OutputVisible9>0</OutputVisible9>
+     <ModelList>
+          <Model>
+               <Name>Addresses</Name>
+               <Description en="Addresses" ru="Addresses"/>
+               <SectionName ru=""/>
+               <HintVisible>0</HintVisible>
+               <Hint en="" ru=""/>
+               <VisibilityConditionValue></VisibilityConditionValue>
+               <VisibilityConditionVariable></VisibilityConditionVariable>
+               <Type>LinesFromFile</Type>
+               <IsAdvanced>0</IsAdvanced>
+               <Visible>1</Visible>
+               <Enabled>1</Enabled>
+               <AllowedTypes>LinesFromFile</AllowedTypes>
+               <Filename></Filename>
+               <Clean>0</Clean>
+               <Read>1</Read>
+               <Mix>0</Mix>
+               <MaxSuccess>1</MaxSuccess>
+               <MaxFail>1</MaxFail>
+               <MaxSimultaneous>1</MaxSimultaneous>
+               <Interval>5000</Interval>
+               <ReloadInterval>0</ReloadInterval>
+               <RenewInterval>-1</RenewInterval>
+               <Greedy>0</Greedy>
+          </Model>
+          <Defaults/>
+     </ModelList>
+</BrowserAutomationStudioProject>
